@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+keycloak:
+  auth-server-url: http://localhost:8080/auth #kecloak server
+  realm: SpringBootKeycloak
+  resource: login-app #client-id
+  public-client: true #default=false, prevents the application from sending credentials to the Keycloak server
+  principal-attribute: preferred_username #the attribute with which to populate the UserPrincipal name. Optional.
+  ssl-required: external
+
+logging:
+  level: debug
