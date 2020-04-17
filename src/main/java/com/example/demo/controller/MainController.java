@@ -31,8 +31,8 @@ public class MainController {
     @GetMapping(path = "/customers")
     @PreAuthorize("hasAuthority('user')")
     public String customers(Principal principal, Model model) {
-//        log.info(principal.toString());
-//        log.info(model.toString());
+        log.info(principal.toString());
+        log.info(model.toString());
         log.info("customers");
         String str = "";
         return "customers";
